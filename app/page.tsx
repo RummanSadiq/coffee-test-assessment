@@ -1,14 +1,19 @@
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import Features from "@/components/pages/dashboard/Features";
+import Hero from "@/components/pages/dashboard/Hero";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <main>
-        <h1>Coffee test</h1>
-      </main>
-      <Footer />
-    </div>
+    <main className="flex flex-col gap-12 xl:gap-26">
+      <Hero />
+      <Image
+        src="/hero.png"
+        alt="Coffee test"
+        width={600}
+        height={300}
+        className="w-full h-full object-cover px-2 sm:px-6 lg:px-8 xl:px-10"
+      />
+      <Features />
+    </main>
   );
 }
