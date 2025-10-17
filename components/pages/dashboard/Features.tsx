@@ -2,6 +2,7 @@ import Container from '@/components/layout/Container'
 import Button from '@/components/ui/Button'
 import { TrackingIcon, LaptopIcon, AnalyticsIcon, NotesIcon, NotificationsIcon, FolderIcon, PenIcon, InfinityIcon, AppleIcon } from '@/components/ui/Icon'
 import { Feature } from '@/types/features'
+import Image from 'next/image'
 import React from 'react'
 
 const Features = () => {
@@ -45,9 +46,17 @@ const Features = () => {
         <Container className='flex flex-col justify-center items-center gap-10 xl:gap-20 pb-14'>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-primary font-bold text-lg lg:text-xl xl:text-2xl text-center w-full max-w-6xl">
                 {features.map((feature, index) => (
-                    <div key={index} className='flex flex-col items-center justify-center w-44 lg:w-48 xl:w-56 mx-auto'>
+                    <div key={index} className='flex flex-col items-center justify-center w-44 lg:w-48 xl:w-56 mx-auto relative'>
                         {feature.icon}
                         <h3>{feature.title}</h3>
+                        {feature.title === 'Perfect for freelancers' &&
+                            <Image
+                                src='/doodle.svg'
+                                alt='Doodle'
+                                width={100}
+                                height={100}
+                                className='absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4' />
+                        }
                     </div>
                 ))}
             </div>

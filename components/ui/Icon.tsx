@@ -63,7 +63,7 @@ export const AppleIcon = createIcon(
 export const ChevronUpIcon = createIcon(
     '0 0 11 11',
     <>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0025 10.5H0L5.50125 0.5L11.0025 10.5Z" fill="currentColor" />
+        <path fillRule="evenodd" clip-rule="evenodd" d="M11.0025 10.5H0L5.50125 0.5L11.0025 10.5Z" fill="currentColor" />
 
     </>,
     'ChevronUpIcon'
